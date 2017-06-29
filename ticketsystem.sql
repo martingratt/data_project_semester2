@@ -26,7 +26,7 @@ CREATE TABLE Spieltage(
 	SpieltagID INT,
     Datum DATE,
     Uhrzeit TIME,
-    Auswärtsmannschaft VARCHAR(50),
+    Gegner VARCHAR(50),
     PRIMARY KEY (SpieltagID)
     );
     
@@ -69,7 +69,7 @@ INSERT INTO Personen(Username, Nachname, Vorname, Geschlecht, PLZ, Strasse, Pass
 	('ggattuso', 'Gattuso', 'Gennaro', 'm', 'I-39023', 'Dorf 20', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'),
 	('hhauser', 'Hauser', 'Hannes', 'm', 'A-6020', 'Theresienstraße 55', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b');
     
-INSERT INTO Spieltage(SpieltagID, Datum, Uhrzeit, Auswärtsmannschaft) VALUES
+INSERT INTO Spieltage(SpieltagID, Datum, Uhrzeit, Gegner) VALUES
 	(1, '2017-06-08', '20:00', 'Wacker Innsbruck'),
     (2, '2017-06-17', '15:30', 'WSG Wattens'),
 	(3, '2017-06-21', '18:30', 'FC Kufstein'),
