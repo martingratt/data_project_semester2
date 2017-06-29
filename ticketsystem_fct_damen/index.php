@@ -10,6 +10,8 @@
 
 <title>Login Page</title>
 
+    <link href="css/login.css" rel="stylesheet">
+
 </head>
 <body>
 
