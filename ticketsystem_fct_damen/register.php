@@ -5,6 +5,7 @@
     <title>
         register
     </title>
+
     <link href="css/login.css" rel="stylesheet">
 
 </head>
@@ -20,13 +21,17 @@
         <div class="form">
 
             <form class="register-form" action="register.php" type="submit" method="post"">
-                <input type="text" placeholder="Nickname" name="nickname" required/>
-                <input type="text" placeholder="Vorname" name="vorname" required/>
-                <input type="text" placeholder="Nachname" name="nachname" required/>
-                <input type="text" placeholder="m/w" name="geschlecht" required/>
-                <input type="text" placeholder="Strasse und Hausnummer" name="strasse" required/>
-                <input type="password" placeholder="Passwort" name="passwort" required/>
-                <input type="password" placeholder="Passwort wiederhohlen" name="passwortwh" required/>
+                <p><input type="text" placeholder="Nickname" name="nickname" required/></p>
+
+                <p></p><input type="text" placeholder="Vorname" name="vorname" required/>
+            <p></p><input type="text" placeholder="Nachname" name="nachname" required/>
+            <p></p><select name="geschlecht">
+                    <option value="m">Männlich</option>
+                    <option value="w">Weiblich</option>
+                </select>
+            <p></p><input type="text" placeholder="Strasse und Hausnummer" name="strasse" required/>
+            <p></p><input type="password" placeholder="Passwort" name="passwort" required/>
+            <p></p><input type="password" placeholder="Passwort wiederhohlen" name="passwortwh" required/>
                 <button value="Registrierern" name="submit">Registieren</button>
                 <p class="message">Schon registriert? <a href="index.php">Jetzt anmelden</a></p>
             </form>

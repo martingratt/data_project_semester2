@@ -1,4 +1,6 @@
-﻿CREATE DATABASE Ticketsystem;
+DROP DATABASE Ticketsystem;
+
+CREATE DATABASE Ticketsystem;
 
 USE Ticketsystem;
 
@@ -14,8 +16,8 @@ CREATE TABLE Personen(
     Vorname VARCHAR(50),
 	Geschlecht VARCHAR(1),
     PLZ VARCHAR(10),
-    Straße VARCHAR(50),
-    Passwort VARCHAR(50),
+    Strasse VARCHAR(50),
+    Passwort VARCHAR(100),
     PRIMARY KEY (Username),
     FOREIGN KEY (PLZ) REFERENCES Ort(PLZ)
     );
@@ -59,13 +61,13 @@ INSERT INTO Ort(PLZ, Ort) VALUES
 	('I-39023', 'Laas'),
 	('A-6020', 'Innsbruck');
 
-INSERT INTO Personen(Username, Nachname, Vorname, Geschlecht, PLZ, Straße, Passwort) VALUES
-	('pgsaller', 'Gsaller', 'Philipp', 'm', 'A-9961', 'Plon 36', 'mypassword'),
-    ('mgratt', 'Gratt', 'Martin', 'm', 'A-6322', 'Hauptstraße 1', 'martin69'),
-	('rspechtenhauser', 'Spechtenhauser', 'Robin', 'm', 'A-6330', 'Schulweg 13', '1616584'),
-	('portner', 'Ortner', 'Peter', 'm', 'D-83022', 'Odeonsplatz 45', 'peter12345'),
-	('ggattuso', 'Gattuso', 'Gennaro', 'm', 'I-39023', 'Dorf 20', 'gg987'),
-	('hhauser', 'Hauser', 'Hannes', 'm', 'A-6020', 'Theresienstraße 55', 'hauserh11');
+INSERT INTO Personen(Username, Nachname, Vorname, Geschlecht, PLZ, Strasse, Passwort) VALUES
+	('pgsaller', 'Gsaller', 'Philipp', 'm', 'A-9961', 'Plon 36', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'), /*asdf*/
+    ('mgratt', 'Gratt', 'Martin', 'm', 'A-6322', 'Hauptstraße 1', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'),
+	('rspechtenhauser', 'Spechtenhauser', 'Robin', 'm', 'A-6330', 'Schulweg 13', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'),
+	('portner', 'Ortner', 'Peter', 'm', 'D-83022', 'Odeonsplatz 45', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'),
+	('ggattuso', 'Gattuso', 'Gennaro', 'm', 'I-39023', 'Dorf 20', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'),
+	('hhauser', 'Hauser', 'Hannes', 'm', 'A-6020', 'Theresienstraße 55', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b');
     
 INSERT INTO Spieltage(SpieltagID, Datum, Uhrzeit, Auswärtsmannschaft) VALUES
 	(1, '2017-06-08', '20:00', 'Wacker Innsbruck'),
@@ -90,4 +92,5 @@ INSERT INTO Tickets(TicketID, SpieltagID, KategorieID, Stadionblock, Reihe, Sitz
 	(5, 3, 1, 'B', 21, 44, 'ggattuso'),
 	(6, 5, 4, 'D', 8, 21, 'hhauser');
 
-    
+
+    SELECT * FROM personen WHERE Username = "mgratt";
