@@ -4,21 +4,20 @@ session_start();
 
 if (isset($_SESSION["name"])) {
     $nickname = $_SESSION["name"];
-    echo "Hallo $nickname";
+    echo "<div class='loggedin'>Logged in as <strong>$nickname</strong></div>";
 
     ?>
     <html>
     <head>
         <title>Ticketsystem</title>
         <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="css/ticketsystem.css" rel="stylesheet">
     </head>
     <body>
-    <h1>
-        Ticketsystem
-    </h1>
-    <a href="ticketsystem.php">Home</a> / <a href="kategorie.php">Kategorie</a>
+    <div class="profil"><a href="ticketsystem.php" class="nav">Home</a></div>
+    <div class="profil"><a href="profile.php" class="nav">Profil</a></div>
+    <div class="logout"><a href="logout.php" class="nav">Logout</a></div>
+    <div class="label"><h1>Ticketsystem</h1></div>
     </body>
 
     <?php
@@ -52,9 +51,6 @@ if (isset($_SESSION["name"])) {
 
     ?>
 
-
-    <p>Hier gehts zu ihrem  <a href="profile.php"> Profil</a></p>
-    <p>Da gehts zum  <a href="logout.php"> Logout</a></p>
     </html>
 
     <?php
