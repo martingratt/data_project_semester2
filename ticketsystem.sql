@@ -94,3 +94,5 @@ INSERT INTO Tickets(TicketID, SpieltagID, KategorieID, Stadionblock, Reihe, Sitz
 
 
     SELECT * FROM personen WHERE Username = "mgratt";
+    
+    SELECT * FROM personen WHERE Username = mgratt;

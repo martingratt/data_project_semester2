@@ -18,8 +18,6 @@ if (isset($_SESSION["name"])) {
         Ihr Profil
     </h1>
     </body>
-
-    <p>Hallo</p>
     </html>
 
     <?php
@@ -34,27 +32,38 @@ $result = mysqli_query($tunnel, $query) or die ($ordiestring);
 
 while($row = mysqli_fetch_array($result)){
 
-    echo "
-			<form action='' type='submit' method='post'> //hier nocht ändern
-				<p>Username <input type='text' name='nickname' value='" . $nickname . "'/></p>
-				<p>Vorname <input type='text' name='vorname' value='" . $row["Vorname"] . "'/></p>
-				<p>Nachname <input type='text' name='nachname' value='" . $row["Nachname"] . "'/></p>
-				<p>Geschlecht <input type='text' name='geschlecht' value='" . $row["Geschlecht"] . "'/></p>
-				<p>PLZ <input type='text' name='postleitzahl' value='" . $row["PLZ"] . "'/></p>
-				<p>Strasse <input type='text' name='strasse' value='" . $row["Strasse"] . "'/></p>				
-				<input type='submit' name='action' value='Update Student'/>
+    if (utf8_encode($row["Geschlecht"]) == "m") {
+        echo "
+			<form action='updateProfile.php' type='submit' method='post'>
+				<p>Username <input type='text' name='nickname' value='" . utf8_encode($nickname) . "' disabled/></p>
+				<p>Vorname <input type='text' name='vorname' value='" . utf8_encode($row["Vorname"]) . "'/></p>
+				<p>Nachname <input type='text' name='nachname' value='" . utf8_encode($row["Nachname"]) . "'/></p>
+            	<p>Geschlecht<select name='geschlecht'>
+                    <option value='m'>Männlich</option>
+                    <option value='w'>Weiblich</option>
+                </select></p>
+				<p>PLZ <input type='text' name='postleitzahl' value='" . utf8_encode($row["PLZ"]) . "'/></p>
+				<p>Strasse <input type='text' name='strasse' value='" . utf8_encode($row["Strasse"]) . "'/></p>				
+				<input type='submit' name='action' value='Speichern'/>
+			</form>";
+    } else {
+        echo "
+			<form action='updateProfile.php' type='submit' method='post'>
+				<p>Username <input type='text' name='nickname' value='" . utf8_encode($nickname) . "' disabled/></p>
+				<p>Vorname <input type='text' name='vorname' value='" . utf8_encode($row["Vorname"]) . "'/></p>
+				<p>Nachname <input type='text' name='nachname' value='" . utf8_encode($row["Nachname"]) . "'/></p>
+				<p>Geschlecht<select name='geschlecht'>
+                    <option value='w'>Weiblich</option>
+                    <option value='m'>Männlich</option>
+                </select></p>
+				<p>PLZ <input type='text' name='postleitzahl' value='" . utf8_encode($row["PLZ"]) . "'/></p>
+				<p>Strasse <input type='text' name='strasse' value='" . utf8_encode($row["Strasse"]) . "'/></p>				
+				<input type='submit' name='action' value='Speichern'/>
 			</form>";
     }
+}
 
 ?>
-
-
-
-
-
-
-
-
 
     <?php
 } else {
