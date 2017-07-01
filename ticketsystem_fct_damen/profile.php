@@ -5,18 +5,24 @@ session_start();
 require_once ("db_newconnection.php");
 
 if (isset($_SESSION["name"])) {
+    $nickname = $_SESSION["name"];
+    echo "<div class='loggedin'>Logged in as <strong>$nickname</strong></div>";
 
     ?>
 
     <html>
     <head>
-        <meta charset="utf-16">
-        <title></title>
+        <title>Ticketsystem</title>
+        <meta charset="UTF-8">
+        <link href="css/ticketsystem.css" rel="stylesheet">
+
     </head>
     <body>
-    <h1>
-        Ihr Profil
-    </h1>
+    <div class="profil"><a href="ticketsystem.php" class="nav">Home</a></div>
+
+    <div class="logout"><a href="logout.php" class="nav">Logout</a></div>
+    <div class="label"><h1>Ticketsystem</h1></div>
+
     </body>
     </html>
 
@@ -63,6 +69,7 @@ while($row = mysqli_fetch_array($result)){
     }
 }
 
+    mysqli_close($tunnel);
 ?>
 
     <?php

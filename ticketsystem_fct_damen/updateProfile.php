@@ -35,6 +35,7 @@ if (isset($_SESSION["name"])) {
             echo "<p>Benutzer wurde erfolgreich geändert</p>";
             echo "Zurück zur <a href='ticketsystem.php'>Startseite</a>";
 
+
         } else {
 
             echo "Ein Problem ist aufgetreten, versuchen Sie es später nocheinmal";
@@ -46,6 +47,7 @@ if (isset($_SESSION["name"])) {
         echo "Versuchen Sie es  <a href='profile.php'>nocheinmal</a>";
 
     }
+    mysqli_close($tunnel);
     ?>
 
 
