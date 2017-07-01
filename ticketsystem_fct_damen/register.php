@@ -13,6 +13,20 @@
 
 <div class="hit-the-floor"><h1>Ticketsystem!</h1></div>
 
+<div class="passwortcheck">
+    <?php
+    $errorUserNameExists = false;
+
+    if (isset($_POST["submit"])){
+
+        //werte prüfen - evtl. einfügen wenn alles passt
+        //falls was nicht passt - error setzen
+        require_once('insertNewPlayer.php');
+    }
+    ?>
+</div>
+
+
 
 <form action="register.php" type="submit" method="post">
 
@@ -30,6 +44,7 @@
                     <option value="w">Weiblich</option>
                 </select>
             <p></p><input type="text" placeholder="Strasse und Hausnummer" name="strasse" required/>
+            <p></p><input type="text" placeholder="Ort" name="ort" required/>
             <p></p><input type="password" placeholder="Passwort" name="passwort" required/>
             <p></p><input type="password" placeholder="Passwort wiederhohlen" name="passwortwh" required/>
                 <button value="Registrierern" name="submit">Registieren</button>
@@ -41,20 +56,11 @@
 
 
 
-    <div class="passwortcheck">
-        <?php
-        $errorUserNameExists = false;
 
-        if (isset($_POST["submit"])){
-
-            //werte prüfen - evtl. einfügen wenn alles passt
-            //falls was nicht passt - error setzen
-            require_once('insertNewPlayer.php');
-        }
-        ?>
-    </div>
 
 </form>
+
+
 
 </body>
 
