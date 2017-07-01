@@ -49,7 +49,7 @@ echo "</tr>";
     }
     echo "</table>";
 
-    mysqli_free_result($db_query);
+
 
 ?>
 

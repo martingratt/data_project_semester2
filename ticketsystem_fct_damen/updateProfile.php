@@ -6,6 +6,8 @@ require_once ("db_newconnection.php");
 
 $nickname = $_SESSION["name"];
 
+$action = $_POST['action'];
+
 if (isset($_SESSION["name"])) {
 
     $vorname = mysqli_escape_string($tunnel, $_POST['vorname']);
@@ -14,37 +16,63 @@ if (isset($_SESSION["name"])) {
     $plz = mysqli_escape_string($tunnel, $_POST['postleitzahl']);
     $strasse = mysqli_escape_string($tunnel, $_POST['strasse']);
 
-    $checkortquery = "SELECT * FROM ort WHERE PLZ ='$plz'";
+    if ($action=="Speichern") {
 
-    $queryresult = mysqli_query($tunnel, $checkortquery);
 
-    $control1 = 0;
+        $checkortquery = "SELECT * FROM ort WHERE PLZ ='$plz'";
 
-    while ($row1 = mysqli_fetch_object($queryresult)) {
-        $control1++;
-    }
+        $queryresult = mysqli_query($tunnel, $checkortquery);
 
-    if ($control1 !=0) {
+        $control1 = 0;
 
-        $query = "UPDATE personen SET Nachname = '" . $nachname . "', Vorname = '" . $vorname . "', Geschlecht = '" . $geschlecht . "', PLZ = '" . $plz . "', Strasse = '" . $strasse . "' WHERE Username = '$nickname'";
+        while ($row1 = mysqli_fetch_object($queryresult)) {
+            $control1++;
+        }
 
-        $result = mysqli_query($tunnel, $query);
+        if ($control1 != 0) {
 
-        if ($result==1) {
+            $query = "UPDATE personen SET Nachname = '" . $nachname . "', Vorname = '" . $vorname . "', Geschlecht = '" . $geschlecht . "', PLZ = '" . $plz . "', Strasse = '" . $strasse . "' WHERE Username = '$nickname'";
 
-            echo "<p>Benutzer wurde erfolgreich geändert</p>";
-            echo "Zurück zur <a href='ticketsystem.php'>Startseite</a>";
+            $result = mysqli_query($tunnel, $query);
+
+            if ($result == 1) {
+
+                echo "<p>Benutzer wurde erfolgreich geändert</p>";
+                echo "Zurück zur <a href='ticketsystem.php'>Startseite</a>";
+
+
+            } else {
+
+                echo "Ein Problem ist aufgetreten, versuchen Sie es später nocheinmal";
+
+            }
+        } else {
+
+            echo "<p>Diese Postleitzahl ist uns nicht bekannt! </p>";
+            echo "Versuchen Sie es  <a href='profile.php'>nocheinmal</a>";
+
+        }
+    }elseif ($action=="Löschen"){ //finde ich persönlich nicht sehr sinnvoll, wurde aber realisiert um
+
+
+
+        $deleteuser = "DELETE FROM personen WHERE Username = '$nickname'";
+
+        $result = mysqli_query($tunnel, $deleteuser);
+
+        if ($result == 1) {
+
+            echo "<p>Benutzer wurde erfolgreich gelöscht</p>";
+            echo "Zurück zum <a href='index.php'>Login</a>";
+            session_destroy();
 
 
         } else {
 
-            echo "Ein Problem ist aufgetreten, versuchen Sie es später nocheinmal";
-
+            echo "<p>Sie können Ihr Profil nur löschen, wenn sie keine keine Tickets angefragt haben!</p>";
+            echo "<p>Zurück zum <a href='ticketsystem.php'>Hauptmenü</a></p>";
         }
-    } else {
 
-        echo "<p>Diese Postleitzahl ist uns nicht bekannt! </p>";
-        echo "Versuchen Sie es  <a href='profile.php'>nocheinmal</a>";
 
     }
     mysqli_close($tunnel);

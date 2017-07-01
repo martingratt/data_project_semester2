@@ -8,6 +8,7 @@ if (isset($_SESSION["name"])) {
     $nickname = $_SESSION["name"];
     echo "<div class='loggedin'>Logged in as <strong>$nickname</strong></div>";
 
+
     ?>
 
     <html>
@@ -51,6 +52,7 @@ while($row = mysqli_fetch_array($result)){
 				<p>PLZ <input type='text' name='postleitzahl' value='" . utf8_encode($row["PLZ"]) . "'/></p>
 				<p>Strasse <input type='text' name='strasse' value='" . utf8_encode($row["Strasse"]) . "'/></p>				
 				<input type='submit' name='action' value='Speichern'/>
+				<input type='submit' name='action' value='Löschen'>
 			</form>";
     } else {
         echo "
@@ -65,6 +67,8 @@ while($row = mysqli_fetch_array($result)){
 				<p>PLZ <input type='text' name='postleitzahl' value='" . utf8_encode($row["PLZ"]) . "'/></p>
 				<p>Strasse <input type='text' name='strasse' value='" . utf8_encode($row["Strasse"]) . "'/></p>				
 				<input type='submit' name='action' value='Speichern'/>
+				<input type='submit' name='action' value='Löschen'>
+				
 			</form>";
     }
 }

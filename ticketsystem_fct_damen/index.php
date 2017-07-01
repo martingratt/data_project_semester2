@@ -2,6 +2,7 @@
 	session_start();
     require_once('db_newconnection.php'); //require lassen und umbauen!
 
+
 ?>
 
 <!DOCTYPE html>

@@ -92,7 +92,17 @@ INSERT INTO Tickets(TicketID, SpieltagID, KategorieID, Stadionblock, Reihe, Sitz
 	(5, 3, 1, 'B', 21, 44, 'ggattuso'),
 	(6, 5, 4, 'D', 8, 21, 'hhauser');
 
+SELECT s.Datum AS Datum, s.Uhrzeit AS Uhrzeit, s.Gegner AS Auswärtmannschaft, p.KategorieID AS Kategorie
+FROM tickets p
+Right JOIN spieltage s
+ON p.SpieltagID = s.SpieltagID
+WHERE Username = 'mgratt';
 
-    SELECT * FROM personen WHERE Username = "mgratt";
+SELECT p.nickname AS nickname,
+                      s.score AS score
+                      FROM `user` p
+                      LEFT JOIN Scores s
+                      ON p.userid = s.userid
+                      ORDER BY s.score DESC
+                      Limit 15;
     
-    SELECT * FROM personen WHERE Username = mgratt;
