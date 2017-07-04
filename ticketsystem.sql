@@ -29,7 +29,7 @@ CREATE TABLE Spieltage(
     Gegner VARCHAR(50),
     PRIMARY KEY (SpieltagID)
     );
-    
+
 CREATE TABLE Kategorie(
     Kategorie VARCHAR(50),
     Preis DECIMAL(4,2),
@@ -37,17 +37,16 @@ CREATE TABLE Kategorie(
     );
 
 CREATE TABLE Tickets(
-	TicketID INT,
+	TicketID INT(10) NOT NULL auto_increment,
     SpieltagID INT,
     Kategorie VARCHAR(50),
     Username VARCHAR(50),
     PRIMARY KEY (TicketID),
-    CONSTRAINT tickets_ibfk_2 FOREIGN KEY (Kategorie) REFERENCES kategorie (Kategorie),
+    FOREIGN KEY (SpieltagID) REFERENCES Spieltage (SpieltagID),
     FOREIGN KEY (Kategorie) REFERENCES Kategorie(Kategorie),
     FOREIGN KEY (Username) REFERENCES Personen(Username)
     );
-
-
+    
     
 INSERT INTO Ort(PLZ, Ort) VALUES
 	('A-9961', 'Hopfgarten'),
@@ -72,33 +71,32 @@ INSERT INTO Spieltage(SpieltagID, Datum, Uhrzeit, Gegner) VALUES
 	(4,'2017-06-24', '20:00', 'FC Wörgl'),
 	(5,'2017-07-01', '18:30', 'Austria Salzburg'),
 	(6,'2017-07-13', '15:30', 'SC Altach');
-    
+ 
 INSERT INTO Kategorie(Kategorie, Preis) VALUES
-	('Südkurve', 25.00),
-	('Osttribüne', 30.00),
-	('Westtribüne', 30.00),
+	('Suedkurve', 25.00),
+	('Osttribuene', 30.00),
+	('Westtribuene', 30.00),
 	('Nordkurve', 20.00),
 	('VIP', 60.00);
-    
-INSERT INTO Tickets(TicketID, SpieltagID, Kategorie, Username) VALUES
-	(1,1,'Südkurve', 'pgsaller'),
-    (2,1,'Osttribüne', 'mgratt'),
-	(3,1,'Osttribüne', 'rspechtenhauser'),
-	(4,2,'VIP', 'portner'),
-	(5,3,'Südkurve', 'ggattuso'),
-	(6,4,'Nordkurve', 'hhauser');
 
-SELECT s.Datum AS Datum, s.Uhrzeit AS Uhrzeit, s.Gegner AS Auswärtmannschaft, p.KategorieID AS Kategorie
-FROM tickets p
-Right JOIN spieltage s
-ON p.SpieltagID = s.SpieltagID
-WHERE Username = 'mgratt';
-
-SELECT p.nickname AS nickname,
-                      s.score AS score
-                      FROM `user` p
-                      LEFT JOIN Scores s
-                      ON p.userid = s.userid
-                      ORDER BY s.score DESC
-                      Limit 15;
+INSERT INTO Tickets(SpieltagID, Kategorie, Username) VALUES
+	(1,'Suedkurve', 'pgsaller'),
+    (1,'Osttribuene', 'mgratt'),
+	(1,'Osttribuene', 'rspechtenhauser'),
+	(2,'VIP', 'portner'),
+	(3,'Suedkurve', 'ggattuso'),
+	(4,'Nordkurve', 'hhauser');
     
+    
+CREATE VIEW Reservierungen AS
+SELECT TicketID, t.SpieltagID AS Spieltag, s.Datum AS Datum, s.Uhrzeit AS Uhrzeit, s.Gegner AS Gegner, t.Kategorie AS Kategorie, k.Preis AS Preis, Username
+FROM tickets t
+JOIN kategorie k
+ON t.Kategorie = k.Kategorie
+JOIN spieltage s
+ON t.SpieltagID = s.SpieltagID;
+
+
+CREATE VIEW Gesamtpreis AS
+SELECT SUM(Preis) AS Gesamtpreis, Username
+FROM Reservierungen;

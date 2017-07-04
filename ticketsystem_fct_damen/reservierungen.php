@@ -50,10 +50,29 @@ if (isset($_SESSION["name"])) {
         echo "<td>" . utf8_encode($zeile['Uhrzeit']) . "</td>";
         echo "<td>" . utf8_encode($zeile['Gegner']) . "</td>";
         echo "<td>" . utf8_encode($zeile['Kategorie']) . "</td>";
-        echo "<td>" . utf8_encode($zeile['Preis']) . "</td>";
+        echo "<td>€ " . utf8_encode($zeile['Preis']) . "</td>";
         echo "</tr>";
 
     }
+    $gesamtpreis = "SELECT * FROM Gesamtpreis WHERE Username = '$nickname'";
+
+    $db_query = mysqli_query($tunnel, $gesamtpreis);
+    if (!$db_query) {
+        die('Ungültige Abfrage: ' . mysqli_error());
+    }
+
+    echo "<tr>";
+    echo "<td></td>";
+    echo "<td></td>";
+    echo "<td></td>";
+    echo "<td></td>";
+    echo "<td></td>";
+    echo "<th>Gesamtpreis</th>";
+    while ($zeile = mysqli_fetch_array($db_query)) {
+        echo "<th>€ " . $zeile['Gesamtpreis'] . "</th>";
+    }
+    echo "</tr>";
+
     echo "</table>";
 
     ?>

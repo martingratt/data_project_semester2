@@ -75,8 +75,7 @@ echo"<button type=\"submit\" name=\"action\">Reservieren</button>";
 </td>
 </tr>
     </table>
-
-
+<br><br>
 
 </html>
 
