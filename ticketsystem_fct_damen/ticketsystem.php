@@ -7,7 +7,7 @@ if (isset($_SESSION["name"])) {
     echo "<div class='loggedin'>Logged in as <strong>$nickname</strong></div>";
 
     ?>
-<html>
+<tr>
 <head>
     <title>Ticketsystem</title>
     <meta charset="UTF-8">
@@ -16,12 +16,14 @@ if (isset($_SESSION["name"])) {
 <body>
 <div class="profil"><a href="ticketsystem.php" class="nav">Home</a></div>
 <div class="profil"><a href="profile.php" class="nav">Profil</a></div>
+<div class="profil"><a href="reservierungen.php" class="nav">Reservierungen</a></div>
 <div class="logout"><a href="logout.php" class="nav">Logout</a></div>
 <div class="label"><h1>Ticketsystem</h1></div>
 </body>
 
-<?php
 
+<form action="insertNewTicket.php" method="post">
+<?php
     include "db_newconnection.php";
     $sql = "SELECT * FROM Spieltage";
 
@@ -30,28 +32,50 @@ if (isset($_SESSION["name"])) {
         die('Ungültige Abfrage: ' . mysqli_error());
     }
 
-    echo '<table>';
+
+$sql = mysqli_query($tunnel, "SELECT * FROM spieltage");
+
+echo '<table>';
 echo "<tr>";
-echo "<th>Spieltag</th>";
-echo "<th>Datum</th>";
-echo "<th>Uhrzeit</th>";
-echo "<th>Gegner</th>";
+echo "<th>Spiel auswählen</th>";
+echo "<th>Kategorie auswählen</th>";
 echo "<th></th>";
 echo "</tr>";
-    while ($zeile = mysqli_fetch_array($db_query)) {
-        echo "<tr>";
-        echo "<th>" . utf8_encode($zeile['SpieltagID']) . "</th>";
-        echo "<td>" . utf8_encode($zeile['Datum']) . "</td>";
-        echo "<td>" . utf8_encode($zeile['Uhrzeit']) . "</td>";
-        echo "<td>" . utf8_encode($zeile['Gegner']) . "</td>";
-        echo "<td><a href='kategorie.php'><button>zu den Tickets</button></a></td>";
-        echo "</tr>";
+
+echo "<tr>";
+echo "<td>";
+
+
+    echo"<select name='SpieltagID' id='ticket'>";
+while ($row = $sql->fetch_assoc()){
+
+    echo "<option value=".$row['SpieltagID'].">".$row['SpieltagID']." | ". $row['Datum']." | ". $row['Uhrzeit']." | ". utf8_encode($row['Gegner'])."</option>";
+
     }
-    echo "</table>";
 
+echo "</select>";
+echo "</td>";
+echo "<td>";
 
+$sql = mysqli_query($tunnel, "SELECT * FROM kategorie");
 
+echo"<select name='Kategorie' id='ticket'>";
+while ($row = $sql->fetch_assoc()){
+
+    echo "<option value=". mysqli_real_escape_string($tunnel,$row['Kategorie']).">".utf8_encode($row['Kategorie'])." | € ". $row['Preis']."</option>";
+
+}
+echo "</select>";
+echo "</td>";
+echo "<td>";
+
+echo"<button type=\"submit\" name=\"action\">Reservieren</button>";
 ?>
+</form>
+</td>
+</tr>
+    </table>
+
 
 
 </html>

@@ -31,23 +31,19 @@ CREATE TABLE Spieltage(
     );
     
 CREATE TABLE Kategorie(
-	KategorieID INT,
-    Bezeichnung VARCHAR(50),
+    Kategorie VARCHAR(50),
     Preis DECIMAL(4,2),
-    PRIMARY KEY (KategorieID)
+    PRIMARY KEY (Kategorie)
     );
-    
+
 CREATE TABLE Tickets(
 	TicketID INT,
     SpieltagID INT,
-    KategorieID INT,
-    Stadionblock VARCHAR(10),
-    Reihe INT,
-    Sitzplatz INT,
+    Kategorie VARCHAR(50),
     Username VARCHAR(50),
     PRIMARY KEY (TicketID),
-    FOREIGN KEY (SpieltagID) REFERENCES Spieltage(SpieltagID),
-    FOREIGN KEY (KategorieID) REFERENCES Kategorie(KategorieID),
+    CONSTRAINT tickets_ibfk_2 FOREIGN KEY (Kategorie) REFERENCES kategorie (Kategorie),
+    FOREIGN KEY (Kategorie) REFERENCES Kategorie(Kategorie),
     FOREIGN KEY (Username) REFERENCES Personen(Username)
     );
 
@@ -70,27 +66,27 @@ INSERT INTO Personen(Username, Nachname, Vorname, Geschlecht, PLZ, Strasse, Pass
 	('hhauser', 'Hauser', 'Hannes', 'm', 'A-6020', 'Theresienstraße 55', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b');
     
 INSERT INTO Spieltage(SpieltagID, Datum, Uhrzeit, Gegner) VALUES
-	(1, '2017-06-08', '20:00', 'Wacker Innsbruck'),
-    (2, '2017-06-17', '15:30', 'WSG Wattens'),
-	(3, '2017-06-21', '18:30', 'FC Kufstein'),
-	(4, '2017-06-24', '20:00', 'FC Wörgl'),
-	(5, '2017-07-01', '18:30', 'Austria Salzburg'),
-	(6, '2017-07-13', '15:30', 'SC Altach');
+	(1,'2017-06-08', '20:00', 'Wacker Innsbruck'),
+    (2,'2017-06-17', '15:30', 'WSG Wattens'),
+	(3,'2017-06-21', '18:30', 'FC Kufstein'),
+	(4,'2017-06-24', '20:00', 'FC Wörgl'),
+	(5,'2017-07-01', '18:30', 'Austria Salzburg'),
+	(6,'2017-07-13', '15:30', 'SC Altach');
     
-INSERT INTO Kategorie(KategorieID, Bezeichnung, Preis) VALUES
-	(1, 'Südkurve', 25.00),
-	(2, 'Osttribüne', 30.00),
-	(3, 'Westtribüne', 30.00),
-	(4, 'Nordkurve', 20.00),
-	(5, 'VIP', 60.00);
+INSERT INTO Kategorie(Kategorie, Preis) VALUES
+	('Südkurve', 25.00),
+	('Osttribüne', 30.00),
+	('Westtribüne', 30.00),
+	('Nordkurve', 20.00),
+	('VIP', 60.00);
     
-INSERT INTO Tickets(TicketID, SpieltagID, KategorieID, Stadionblock, Reihe, Sitzplatz, Username) VALUES
-	(1, 1, 1, 'A', 10, 15, 'pgsaller'),
-    (2, 1, 2, 'G', 50, 1, 'mgratt'),
-	(3, 1, 2, 'G', 50, 2, 'rspechtenhauser'),
-	(4, 2, 5, 'A', 2, 20, 'portner'),
-	(5, 3, 1, 'B', 21, 44, 'ggattuso'),
-	(6, 5, 4, 'D', 8, 21, 'hhauser');
+INSERT INTO Tickets(TicketID, SpieltagID, Kategorie, Username) VALUES
+	(1,1,'Südkurve', 'pgsaller'),
+    (2,1,'Osttribüne', 'mgratt'),
+	(3,1,'Osttribüne', 'rspechtenhauser'),
+	(4,2,'VIP', 'portner'),
+	(5,3,'Südkurve', 'ggattuso'),
+	(6,4,'Nordkurve', 'hhauser');
 
 SELECT s.Datum AS Datum, s.Uhrzeit AS Uhrzeit, s.Gegner AS Auswärtmannschaft, p.KategorieID AS Kategorie
 FROM tickets p

@@ -16,14 +16,13 @@ if (isset($_SESSION["name"])) {
         <title>Ticketsystem</title>
         <meta charset="UTF-8">
         <link href="css/ticketsystem.css" rel="stylesheet">
-
     </head>
     <body>
     <div class="profil"><a href="ticketsystem.php" class="nav">Home</a></div>
-
+    <div class="profil"><a href="profile.php" class="nav">Profil</a></div>
+    <div class="profil"><a href="reservierungen.php" class="nav">Reservierungen</a></div>
     <div class="logout"><a href="logout.php" class="nav">Logout</a></div>
     <div class="label"><h1>Ticketsystem</h1></div>
-
     </body>
     </html>
 
