@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a4f9f6fb-4c2d-43fd-a058-9e1b6c8bf363" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketsystem_fct_damen/index.php" afterPath="$PROJECT_DIR$/ticketsystem_fct_damen/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketsystem_fct_damen/insertNewPlayer.php" afterPath="$PROJECT_DIR$/ticketsystem_fct_damen/insertNewPlayer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketsystem.sql" afterPath="$PROJECT_DIR$/ticketsystem.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketsystem_fct_damen/deleteTicket.php" afterPath="$PROJECT_DIR$/ticketsystem_fct_damen/deleteTicket.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketsystem_fct_damen/insertNewTicket.php" afterPath="$PROJECT_DIR$/ticketsystem_fct_damen/insertNewTicket.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketsystem_fct_damen/profile.php" afterPath="$PROJECT_DIR$/ticketsystem_fct_damen/profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketsystem_fct_damen/register.php" afterPath="$PROJECT_DIR$/ticketsystem_fct_damen/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketsystem_fct_damen/reservierungen.php" afterPath="$PROJECT_DIR$/ticketsystem_fct_damen/reservierungen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketsystem_fct_damen/ticketsystem.php" afterPath="$PROJECT_DIR$/ticketsystem_fct_damen/ticketsystem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketsystem_fct_damen/updateProfile.php" afterPath="$PROJECT_DIR$/ticketsystem_fct_damen/updateProfile.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,10 +17,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-549">
+            <state relative-caret-position="127">
               <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
               <folding>
                 <marker date="1499248744502" expanded="true" signature="1081:1151" ph="select * fro... personen" />
@@ -34,11 +29,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/css/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1649">
+              <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ticketsystem.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/ticketsystem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+            <state relative-caret-position="391">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <marker date="1499248372633" expanded="true" signature="817:840" ph="SELECT * FRO... Spieltage" />
                 <marker date="1499248372633" expanded="true" signature="1001:1024" ph="SELECT * FRO... spieltage" />
@@ -56,7 +61,6 @@
                 <marker date="1499248372633" expanded="true" signature="1434:1457" ph="SELECT * FRO... kategorie" />
                 <marker date="1499248372633" expanded="true" signature="1712:1714" ph="..." />
                 <marker date="1499248372633" expanded="true" signature="1712:1773" ph="..." />
-                <marker date="1499248372633" expanded="true" signature="1712:1787" ph="..." />
               </folding>
             </state>
           </provider>
@@ -65,7 +69,7 @@
       <file leaf-file-name="reservierungen.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/reservierungen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
+            <state relative-caret-position="733">
               <caret line="111" column="20" lean-forward="false" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
               <folding>
                 <marker date="1499248482953" expanded="true" signature="811:846" ph="SELECT * FRO... Tickets" />
@@ -84,27 +88,25 @@
                 <marker date="1499248482953" expanded="true" signature="1928:1998" ph="..." />
                 <marker date="1499248482953" expanded="true" signature="1928:2023" ph="..." />
                 <marker date="1499248482953" expanded="true" signature="2097:2133" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2242:2429" ph="..." />
                 <marker date="1499248482953" expanded="true" signature="2314:2335" ph="SELECT * FRO... Tickets" />
-                <marker date="1499248482953" expanded="true" signature="2320:2328" ph="SELECT * FRO... Spieltage" />
-                <marker date="1499248482953" expanded="true" signature="2520:2534" ph="SELECT * FRO... spieltage" />
-                <marker date="1499248482953" expanded="true" signature="2520:2541" ph="SELECT * FRO... Tickets" />
-                <marker date="1499248482953" expanded="true" signature="2520:2556" ph="SELECT * FRO... Tickets" />
                 <marker date="1499248482953" expanded="true" signature="2520:2588" ph="SELECT * FRO... Tickets" />
-                <marker date="1499248482953" expanded="true" signature="2520:2614" ph="SELECT * FRO... Tickets" />
-                <marker date="1499248482953" expanded="true" signature="2626:2636" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2626:2662" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2626:2670" ph="..." />
+                <marker date="1499248482953" expanded="true" signature="2613:2744" ph="..." />
                 <marker date="1499248482953" expanded="true" signature="2626:2684" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2697:2710" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2697:2733" ph="..." />
                 <marker date="1499248482953" expanded="true" signature="2697:2744" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2710:2721" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2710:2733" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2944:2946" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2944:3005" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2944:3091" ph="..." />
-                <marker date="1499248482953" expanded="true" signature="2944:3128" ph="..." />
+                <marker date="1499248482953" expanded="true" signature="2710:2744" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteTicket.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/deleteTicket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="42" />
+              <folding>
+                <marker date="1499277672526" expanded="true" signature="104:200" ph="DELETE FROM " />
+                <marker date="1499277672526" expanded="true" signature="115:197" ph="INSERT INTO tickets... " />
               </folding>
             </state>
           </provider>
@@ -127,15 +129,15 @@
       <file leaf-file-name="insertNewTicket.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/insertNewTicket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <state relative-caret-position="119">
+              <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
               <folding>
-                <marker date="1499248554833" expanded="true" signature="47:111" ph="INSERT INTO tickets... " />
-                <marker date="1499248554833" expanded="true" signature="47:114" ph="INSERT INTO tickets... " />
-                <marker date="1499248554833" expanded="true" signature="47:175" ph="INSERT INTO tickets... " />
-                <marker date="1499248554833" expanded="true" signature="47:240" ph="INSERT INTO tickets... " />
-                <marker date="1499248554833" expanded="true" signature="47:300" ph="INSERT INTO tickets... " />
-                <marker date="1499248554833" expanded="true" signature="47:301" ph="INSERT INTO tickets... " />
+                <marker date="1499277763675" expanded="true" signature="76:140" ph="INSERT INTO tickets... " />
+                <marker date="1499277763675" expanded="true" signature="76:143" ph="INSERT INTO tickets... " />
+                <marker date="1499277763675" expanded="true" signature="76:204" ph="INSERT INTO tickets... " />
+                <marker date="1499277763675" expanded="true" signature="76:269" ph="INSERT INTO tickets... " />
+                <marker date="1499277763675" expanded="true" signature="76:329" ph="INSERT INTO tickets... " />
+                <marker date="1499277763675" expanded="true" signature="76:330" ph="INSERT INTO tickets... " />
               </folding>
             </state>
           </provider>
@@ -144,25 +146,12 @@
       <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="1411">
               <caret line="83" column="1" lean-forward="false" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
               <folding>
                 <marker date="1499248687892" expanded="true" signature="938:989" ph="SELECT * FRO... personen" />
                 <marker date="1499248687892" expanded="true" signature="1229:1852" ph="..." />
                 <marker date="1499248687892" expanded="true" signature="1229:1857" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="1229:2126" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="1229:2386" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="1554:1732" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="1590:1728" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="1852:1857" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="1942:1959" ph="SELECT * FRO... ort" />
-                <marker date="1499248687892" expanded="true" signature="1942:1980" ph="SELECT * FRO... ort" />
-                <marker date="1499248687892" expanded="true" signature="2000:2126" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="2481:2988" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="2481:3307" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="2797:2975" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="2833:2971" ph="..." />
-                <marker date="1499248687892" expanded="true" signature="2983:2988" ph="..." />
               </folding>
             </state>
           </provider>
@@ -171,7 +160,7 @@
       <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
+            <state relative-caret-position="1071">
               <caret line="63" column="10" lean-forward="false" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
               <folding>
                 <marker date="1499248744433" expanded="true" signature="1346:1363" ph="SELECT * FRO... ort" />
@@ -183,7 +172,7 @@
       <file leaf-file-name="updateProfile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/updateProfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-257">
+            <state relative-caret-position="782">
               <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <marker date="1499247515962" expanded="true" signature="549:584" ph="SELECT * FRO... ort" />
@@ -245,16 +234,16 @@
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/myTickets.php" />
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/kategorie.php" />
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/ticketsystem1.php" />
-        <option value="$PROJECT_DIR$/ticketsystem_fct_damen/deleteTicket.php" />
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/css/ticketsystem.css" />
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/updateProfile.php" />
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/ticketsystem.php" />
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/reservierungen.php" />
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/insertNewPlayer.php" />
-        <option value="$PROJECT_DIR$/ticketsystem_fct_damen/insertNewTicket.php" />
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/profile.php" />
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/register.php" />
         <option value="$PROJECT_DIR$/ticketsystem_fct_damen/index.php" />
+        <option value="$PROJECT_DIR$/ticketsystem_fct_damen/deleteTicket.php" />
+        <option value="$PROJECT_DIR$/ticketsystem_fct_damen/insertNewTicket.php" />
       </list>
     </option>
   </component>
@@ -452,12 +441,13 @@
       <workItem from="1499147857471" duration="1207000" />
       <workItem from="1499164968508" duration="16019000" />
       <workItem from="1499191289541" duration="2577000" />
-      <workItem from="1499242546870" duration="6089000" />
+      <workItem from="1499242546870" duration="6205000" />
+      <workItem from="1499277065808" duration="954000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61480000" />
+    <option name="totallyTimeSpent" value="62550000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -521,19 +511,6 @@
             <marker date="1499248687892" expanded="true" signature="938:989" ph="SELECT * FRO... personen" />
             <marker date="1499248687892" expanded="true" signature="1229:1852" ph="..." />
             <marker date="1499248687892" expanded="true" signature="1229:1857" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1229:2126" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1229:2386" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1554:1732" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1590:1728" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1852:1857" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1942:1959" ph="SELECT * FRO... ort" />
-            <marker date="1499248687892" expanded="true" signature="1942:1980" ph="SELECT * FRO... ort" />
-            <marker date="1499248687892" expanded="true" signature="2000:2126" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2481:2988" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2481:3307" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2797:2975" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2833:2971" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2983:2988" ph="..." />
           </folding>
         </state>
       </provider>
@@ -591,7 +568,6 @@
             <marker date="1499248372633" expanded="true" signature="1434:1457" ph="SELECT * FRO... kategorie" />
             <marker date="1499248372633" expanded="true" signature="1712:1714" ph="..." />
             <marker date="1499248372633" expanded="true" signature="1712:1773" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1712:1787" ph="..." />
           </folding>
         </state>
       </provider>
@@ -635,7 +611,6 @@
             <marker date="1499248372633" expanded="true" signature="1434:1457" ph="SELECT * FRO... kategorie" />
             <marker date="1499248372633" expanded="true" signature="1712:1714" ph="..." />
             <marker date="1499248372633" expanded="true" signature="1712:1773" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1712:1787" ph="..." />
           </folding>
         </state>
       </provider>
@@ -648,19 +623,6 @@
             <marker date="1499248687892" expanded="true" signature="938:989" ph="SELECT * FRO... personen" />
             <marker date="1499248687892" expanded="true" signature="1229:1852" ph="..." />
             <marker date="1499248687892" expanded="true" signature="1229:1857" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1229:2126" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1229:2386" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1554:1732" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1590:1728" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1852:1857" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1942:1959" ph="SELECT * FRO... ort" />
-            <marker date="1499248687892" expanded="true" signature="1942:1980" ph="SELECT * FRO... ort" />
-            <marker date="1499248687892" expanded="true" signature="2000:2126" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2481:2988" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2481:3307" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2797:2975" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2833:2971" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2983:2988" ph="..." />
           </folding>
         </state>
       </provider>
@@ -789,7 +751,6 @@
             <marker date="1499248372633" expanded="true" signature="1434:1457" ph="SELECT * FRO... kategorie" />
             <marker date="1499248372633" expanded="true" signature="1712:1714" ph="..." />
             <marker date="1499248372633" expanded="true" signature="1712:1773" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1712:1787" ph="..." />
           </folding>
         </state>
       </provider>
@@ -805,13 +766,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/spielplan.php" />
-    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/sitzplatz.php" />
     <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/db_details.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -840,54 +794,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/kategorie.php" />
     <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/ticketsystem1.php" />
-    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/deleteTicket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding>
-            <marker date="1499184396421" expanded="true" signature="104:200" ph="DELETE FROM " />
-            <marker date="1499184396421" expanded="true" signature="115:197" ph="INSERT INTO tickets... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/css/ticketsystem.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/ticketsystem.php">
+    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+        <state relative-caret-position="1411">
+          <caret line="83" column="1" lean-forward="false" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
           <folding>
-            <marker date="1499248372633" expanded="true" signature="817:840" ph="SELECT * FRO... Spieltage" />
-            <marker date="1499248372633" expanded="true" signature="1001:1024" ph="SELECT * FRO... spieltage" />
-            <marker date="1499248372633" expanded="true" signature="1041:1043" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1041:1046" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1046:1048" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1046:1071" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1046:1116" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1121:1126" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1121:1152" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1126:1138" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1126:1152" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1399:1432" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1399:1479" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1434:1457" ph="SELECT * FRO... kategorie" />
-            <marker date="1499248372633" expanded="true" signature="1712:1714" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1712:1773" ph="..." />
-            <marker date="1499248372633" expanded="true" signature="1712:1787" ph="..." />
+            <marker date="1499248687892" expanded="true" signature="938:989" ph="SELECT * FRO... personen" />
+            <marker date="1499248687892" expanded="true" signature="1229:1852" ph="..." />
+            <marker date="1499248687892" expanded="true" signature="1229:1857" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="10" lean-forward="false" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+          <folding>
+            <marker date="1499248744433" expanded="true" signature="1346:1363" ph="SELECT * FRO... ort" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/updateProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <marker date="1499247515962" expanded="true" signature="549:584" ph="SELECT * FRO... ort" />
+            <marker date="1499247515962" expanded="true" signature="824:1021" ph="UPDATE perso... " />
+            <marker date="1499247515962" expanded="true" signature="1686:1735" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/insertNewPlayer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <marker date="1499248532651" expanded="true" signature="833:868" ph="SELECT * FRO... ort" />
+            <marker date="1499248532651" expanded="true" signature="2095:2153" ph="SELECT Usern... personen" />
+            <marker date="1499248532651" expanded="true" signature="2716:2986" ph="INSERT INTO personen... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/reservierungen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
+        <state relative-caret-position="733">
           <caret line="111" column="20" lean-forward="false" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
           <folding>
             <marker date="1499248482953" expanded="true" signature="811:846" ph="SELECT * FRO... Tickets" />
@@ -906,112 +868,82 @@
             <marker date="1499248482953" expanded="true" signature="1928:1998" ph="..." />
             <marker date="1499248482953" expanded="true" signature="1928:2023" ph="..." />
             <marker date="1499248482953" expanded="true" signature="2097:2133" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2242:2429" ph="..." />
             <marker date="1499248482953" expanded="true" signature="2314:2335" ph="SELECT * FRO... Tickets" />
-            <marker date="1499248482953" expanded="true" signature="2320:2328" ph="SELECT * FRO... Spieltage" />
-            <marker date="1499248482953" expanded="true" signature="2520:2534" ph="SELECT * FRO... spieltage" />
-            <marker date="1499248482953" expanded="true" signature="2520:2541" ph="SELECT * FRO... Tickets" />
-            <marker date="1499248482953" expanded="true" signature="2520:2556" ph="SELECT * FRO... Tickets" />
             <marker date="1499248482953" expanded="true" signature="2520:2588" ph="SELECT * FRO... Tickets" />
-            <marker date="1499248482953" expanded="true" signature="2520:2614" ph="SELECT * FRO... Tickets" />
-            <marker date="1499248482953" expanded="true" signature="2626:2636" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2626:2662" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2626:2670" ph="..." />
+            <marker date="1499248482953" expanded="true" signature="2613:2744" ph="..." />
             <marker date="1499248482953" expanded="true" signature="2626:2684" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2697:2710" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2697:2733" ph="..." />
             <marker date="1499248482953" expanded="true" signature="2697:2744" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2710:2721" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2710:2733" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2944:2946" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2944:3005" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2944:3091" ph="..." />
-            <marker date="1499248482953" expanded="true" signature="2944:3128" ph="..." />
+            <marker date="1499248482953" expanded="true" signature="2710:2744" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/insertNewPlayer.php">
+    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/deleteTicket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="42" />
           <folding>
-            <marker date="1499248532651" expanded="true" signature="833:868" ph="SELECT * FRO... ort" />
-            <marker date="1499248532651" expanded="true" signature="2095:2153" ph="SELECT Usern... personen" />
-            <marker date="1499248532651" expanded="true" signature="2716:2986" ph="INSERT INTO personen... " />
+            <marker date="1499277672526" expanded="true" signature="104:200" ph="DELETE FROM " />
+            <marker date="1499277672526" expanded="true" signature="115:197" ph="INSERT INTO tickets... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/ticketsystem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <marker date="1499248372633" expanded="true" signature="817:840" ph="SELECT * FRO... Spieltage" />
+            <marker date="1499248372633" expanded="true" signature="1001:1024" ph="SELECT * FRO... spieltage" />
+            <marker date="1499248372633" expanded="true" signature="1041:1043" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1041:1046" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1046:1048" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1046:1071" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1046:1116" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1121:1126" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1121:1152" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1126:1138" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1126:1152" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1399:1432" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1399:1479" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1434:1457" ph="SELECT * FRO... kategorie" />
+            <marker date="1499248372633" expanded="true" signature="1712:1714" ph="..." />
+            <marker date="1499248372633" expanded="true" signature="1712:1773" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/insertNewTicket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           <folding>
-            <marker date="1499248554833" expanded="true" signature="47:111" ph="INSERT INTO tickets... " />
-            <marker date="1499248554833" expanded="true" signature="47:114" ph="INSERT INTO tickets... " />
-            <marker date="1499248554833" expanded="true" signature="47:175" ph="INSERT INTO tickets... " />
-            <marker date="1499248554833" expanded="true" signature="47:240" ph="INSERT INTO tickets... " />
-            <marker date="1499248554833" expanded="true" signature="47:300" ph="INSERT INTO tickets... " />
-            <marker date="1499248554833" expanded="true" signature="47:301" ph="INSERT INTO tickets... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="83" column="1" lean-forward="false" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
-          <folding>
-            <marker date="1499248687892" expanded="true" signature="938:989" ph="SELECT * FRO... personen" />
-            <marker date="1499248687892" expanded="true" signature="1229:1852" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1229:1857" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1229:2126" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1229:2386" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1554:1732" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1590:1728" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1852:1857" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="1942:1959" ph="SELECT * FRO... ort" />
-            <marker date="1499248687892" expanded="true" signature="1942:1980" ph="SELECT * FRO... ort" />
-            <marker date="1499248687892" expanded="true" signature="2000:2126" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2481:2988" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2481:3307" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2797:2975" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2833:2971" ph="..." />
-            <marker date="1499248687892" expanded="true" signature="2983:2988" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="63" column="10" lean-forward="false" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
-          <folding>
-            <marker date="1499248744433" expanded="true" signature="1346:1363" ph="SELECT * FRO... ort" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/updateProfile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <marker date="1499247515962" expanded="true" signature="549:584" ph="SELECT * FRO... ort" />
-            <marker date="1499247515962" expanded="true" signature="824:1021" ph="UPDATE perso... " />
-            <marker date="1499247515962" expanded="true" signature="1686:1735" ph="DELETE FROM " />
+            <marker date="1499277763675" expanded="true" signature="76:140" ph="INSERT INTO tickets... " />
+            <marker date="1499277763675" expanded="true" signature="76:143" ph="INSERT INTO tickets... " />
+            <marker date="1499277763675" expanded="true" signature="76:204" ph="INSERT INTO tickets... " />
+            <marker date="1499277763675" expanded="true" signature="76:269" ph="INSERT INTO tickets... " />
+            <marker date="1499277763675" expanded="true" signature="76:329" ph="INSERT INTO tickets... " />
+            <marker date="1499277763675" expanded="true" signature="76:330" ph="INSERT INTO tickets... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-549">
+        <state relative-caret-position="127">
           <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding>
             <marker date="1499248744502" expanded="true" signature="1081:1151" ph="select * fro... personen" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketsystem_fct_damen/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>

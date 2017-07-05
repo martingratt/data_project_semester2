@@ -8,6 +8,7 @@ $sql = "DELETE FROM tickets WHERE TicketID = '".mysqli_real_escape_string($tunne
 
 if ($tunnel->query($sql) === TRUE) {
     echo "Erfolgreich gelöscht";
+    header('location:reservierungen.php');
 } else {
     echo "Error: " . $sql . "<br>" . $tunnel->error;
 }

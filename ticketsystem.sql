@@ -14,7 +14,7 @@ CREATE TABLE Personen(
 	Username VARCHAR(50),
     	Nachname VARCHAR(50),
     	Vorname VARCHAR(50),
-	Geschlecht VARCHAR(1),
+		Geschlecht VARCHAR(1),
     	PLZ VARCHAR(10),
     	Strasse VARCHAR(50),
     	Passwort VARCHAR(100),
@@ -55,17 +55,14 @@ INSERT INTO Ort(PLZ, Ort) VALUES
 	('D-83022', 'Rosenheim'),
 	('I-39023', 'Laas'),
 	('A-6020', 'Innsbruck'),
-    	('D-80331', 'Muenchen'),
-
-    	('A-6300', 'Woergl'),
-
-    	('A-9900', 'Lienz'),
-
-    	('I-10057', 'Turin');
+	('D-80331', 'München'),
+    ('A-6300', 'Wörgl'),
+    ('A-9900', 'Lienz'),
+    ('I-10057', 'Turin');
 
 INSERT INTO Personen(Username, Nachname, Vorname, Geschlecht, PLZ, Strasse, Passwort) VALUES
 	('pgsaller', 'Gsaller', 'Philipp', 'm', 'A-9961', 'Plon 36', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'), /*asdf*/
-    	('mgratt', 'Gratt', 'Martin', 'm', 'A-6322', 'Hauptstraße 1', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'),
+	('mgratt', 'Gratt', 'Martin', 'm', 'A-6322', 'Hauptstraße 1', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'),
 	('rspechtenhauser', 'Spechtenhauser', 'Robin', 'm', 'A-6330', 'Schulweg 13', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'),
 	('portner', 'Ortner', 'Peter', 'm', 'D-83022', 'Odeonsplatz 45', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'),
 	('ggattuso', 'Gattuso', 'Gennaro', 'm', 'I-39023', 'Dorf 20', 'f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b'),
@@ -77,7 +74,7 @@ INSERT INTO Spieltage(SpieltagID, Datum, Uhrzeit, Gegner) VALUES
 	(3,'2017-06-21', '18:30', 'FC Kufstein'),
 	(4,'2017-06-24', '20:00', 'FC Wörgl'),
 	(5,'2017-07-30', '18:30', 'Austria Salzburg'),
-	(6,'2017-08-03', '15:30', 'SC Altach')
+	(6,'2017-08-03', '15:30', 'SC Altach'),
 	(7,'2017-08-11', '20:00', 'Juventus Turin'),
 	(8,'2017-08-15', '20:45', 'Real Madrid'),
 	(9,'2017-08-22', '18:30', 'Chelsea London'),
@@ -93,7 +90,7 @@ INSERT INTO Kategorie(Kategorie, Preis) VALUES
 
 INSERT INTO Tickets(SpieltagID, Kategorie, Username) VALUES
 	(1,'Suedkurve', 'pgsaller'),
-    	(1,'Osttribuene', 'mgratt'),
+	(1,'Osttribuene', 'mgratt'),
 	(1,'Osttribuene', 'rspechtenhauser'),
 	(2,'VIP', 'portner'),
 	(3,'Suedkurve', 'ggattuso'),
