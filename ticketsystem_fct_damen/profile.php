@@ -2,6 +2,14 @@
 
 session_start();
 
+// Wir fanden es sinnvoller, den Usernamen direkt von der Session zu beziehen
+// und den User nicht mit z. B. einer ID danach suchen zu lassen, da er sonst auf
+// Daten von anderen Usern zugriff hätte. Darum haben wir uns entschieden
+// kein eingabefeld für eine suche zur Verfügung zu stellen und diese direkt
+// zu beziehen
+
+
+
 require_once ("db_newconnection.php");
 
 if (isset($_SESSION["name"])) {
