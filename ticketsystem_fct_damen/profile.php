@@ -8,7 +8,6 @@ if (isset($_SESSION["name"])) {
     $nickname = $_SESSION["name"];
     echo "<div class='loggedin'>Logged in as <strong>$nickname</strong></div>";
 
-
     ?>
 
     <html>
@@ -22,7 +21,7 @@ if (isset($_SESSION["name"])) {
     <div class="profil"><a href="profile.php" class="nav">Profil</a></div>
     <div class="profil"><a href="reservierungen.php" class="nav">Reservierungen</a></div>
     <div class="logout"><a href="logout.php" class="nav">Logout</a></div>
-    <div class="label"><h1>Ticketsystem</h1></div>
+    <div class="label"><h1>Ticketsystem - FC Tirol (Damen)</h1></div>
     </body>
     </html>
 
@@ -48,8 +47,20 @@ while($row = mysqli_fetch_array($result)){
                     <option value='m'>Männlich</option>
                     <option value='w'>Weiblich</option>
                 </select></p>
-				<p>PLZ <input type='text' name='postleitzahl' value='" . utf8_encode($row["PLZ"]) . "'/></p>
-				<p>Strasse <input type='text' name='strasse' value='" . utf8_encode($row["Strasse"]) . "'/></p>				
+                <p>Strasse <input type='text' name='strasse' value='" . utf8_encode($row["Strasse"]) . "'/></p>
+				<p>PLZ";
+        include "db_newconnection.php";
+
+            $sql = mysqli_query($tunnel, "SELECT * FROM ort");
+
+            echo "<select name='Ort'>";
+            while ($row = $sql->fetch_assoc()){
+
+                echo "<option value=". mysqli_real_escape_string($tunnel,$row['PLZ']).">".($row['PLZ'])." | ". utf8_encode($row['Ort'])."</option>";
+
+            }
+            echo "</select>
+            </p>
 				<input type='submit' name='action' value='Speichern'/>
 				<input type='submit' name='action' value='Löschen'>
 			</form>";
@@ -71,11 +82,8 @@ while($row = mysqli_fetch_array($result)){
 			</form>";
     }
 }
-
     mysqli_close($tunnel);
-?>
 
-    <?php
 } else {
     ?>
     Bitte erste einloggen, <a href="index.php">hier</a>.

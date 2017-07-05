@@ -13,13 +13,13 @@ if (isset($_SESSION["name"])) {
     $vorname = mysqli_escape_string($tunnel, $_POST['vorname']);
     $nachname = mysqli_escape_string($tunnel, $_POST['nachname']);
     $geschlecht = mysqli_escape_string($tunnel, $_POST['geschlecht']);
-    $plz = mysqli_escape_string($tunnel, $_POST['postleitzahl']);
+    $ort = mysqli_real_escape_string($tunnel,$_POST['Ort']);
     $strasse = mysqli_escape_string($tunnel, $_POST['strasse']);
 
     if ($action=="Speichern") {
 
 
-        $checkortquery = "SELECT * FROM ort WHERE PLZ ='$plz'";
+        $checkortquery = "SELECT * FROM ort WHERE PLZ ='$ort'";
 
         $queryresult = mysqli_query($tunnel, $checkortquery);
 
@@ -31,7 +31,7 @@ if (isset($_SESSION["name"])) {
 
         if ($control1 != 0) {
 
-            $query = "UPDATE personen SET Nachname = '" . $nachname . "', Vorname = '" . $vorname . "', Geschlecht = '" . $geschlecht . "', PLZ = '" . $plz . "', Strasse = '" . $strasse . "' WHERE Username = '$nickname'";
+            $query = "UPDATE personen SET Nachname = '" . $nachname . "', Vorname = '" . $vorname . "', Geschlecht = '" . $geschlecht . "', PLZ = '" . $ort . "', Strasse = '" . $strasse . "' WHERE Username = '$nickname'";
 
             $result = mysqli_query($tunnel, $query);
 

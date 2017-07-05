@@ -1,9 +1,8 @@
 <?php
 
         include "db_newconnection.php";
+
         $ordiestring = "<p><strong>PHP Info: </strong>Abfrage war nicht möglich.</p>";
-
-
 
             //alles klein
             $nickname = mysqli_escape_string($tunnel, strtolower($_POST["nickname"]));
@@ -13,7 +12,7 @@
             $vorname = mysqli_escape_string($tunnel, $_POST["vorname"]);
             $nachname = mysqli_escape_string($tunnel, $_POST["nachname"]);
             $geschlecht = mysqli_escape_string($tunnel, $_POST["geschlecht"]);
-            $ort = mysqli_escape_string($tunnel, $_POST["ort"]);
+            $ort = mysqli_real_escape_string($tunnel,$_POST['Ort']);
             $strasse = mysqli_escape_string($tunnel, $_POST["strasse"]);
 
             $checkortquery = "SELECT * FROM ort WHERE PLZ ='$ort'";
@@ -33,7 +32,6 @@
                     $hash = hash('sha256', $passwort);
 
                     //Vergleich ob alle Datensätze ausgefüllt wurden
-
 
                     if ($_POST["passwort"] == NULL) {
                         echo "passwort ist leer";
@@ -64,15 +62,12 @@
 
                             } else {
 
-
                                 $sql = "INSERT INTO personen (Username, Nachname, Vorname, Geschlecht, PLZ, Strasse, Passwort) VALUES
                                       ('" . $nickname . "', '" . $nachname . "', '" . $vorname . "', '" . $geschlecht . "', '" . $ort . "', '" . $strasse . "', '" . $hash . "');";
-
 
                                 $result = mysqli_query($tunnel, $sql);
 
                                 echo "<p>Ihr Benutzer wurde erfolgreich angelegt, melden Sie sich jetzt an <a href='index.php'>Anmelden</a> </p>";
-
 
                             }
                         }

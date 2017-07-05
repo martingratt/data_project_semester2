@@ -1,5 +1,3 @@
-
-
 <html>
 <head>
     <title>
@@ -26,15 +24,13 @@
     ?>
 </div>
 
-
-
 <form action="register.php" type="submit" method="post">
 
     <div class="login-page">
 
         <div class="form">
 
-            <form class="register-form" action="register.php" type="submit" method="post"">
+            <form class="register-form" action="register.php" type="submit" method="post">
                 <p><input type="text" placeholder="Nickname" name="nickname" required/></p>
 
                 <p></p><input type="text" placeholder="Vorname" name="vorname" required/>
@@ -44,7 +40,20 @@
                     <option value="w">Weiblich</option>
                 </select>
             <p></p><input type="text" placeholder="Strasse und Hausnummer" name="strasse" required/>
-            <p></p><input type="text" placeholder="Ort" name="ort" required/>
+            <p></p>
+            <?php
+            include "db_newconnection.php";
+
+            $sql = mysqli_query($tunnel, "SELECT * FROM ort");
+
+            echo"<select name='Ort'>";
+            while ($row = $sql->fetch_assoc()){
+
+                echo "<option value=". mysqli_real_escape_string($tunnel,$row['PLZ']).">".($row['PLZ'])." | ". utf8_encode($row['Ort'])."</option>";
+
+            }
+            echo "</select>";
+                ?>
             <p></p><input type="password" placeholder="Passwort" name="passwort" required/>
             <p></p><input type="password" placeholder="Passwort wiederhohlen" name="passwortwh" required/>
                 <button value="Registrierern" name="submit">Registieren</button>
@@ -54,13 +63,7 @@
         </div>
     </div>
 
-
-
-
-
 </form>
-
-
 
 </body>
 

@@ -2,7 +2,6 @@
 	session_start();
     require_once('db_newconnection.php'); //require lassen und umbauen!
 
-
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +15,6 @@
 </head>
 <body>
 
-
-
 <div class="login-page">
     <div class="hit-the-floor"><h1>Ticketsystem</h1></div>
     <div class="form">
@@ -29,7 +26,6 @@
             <p class="message">Noch nicht registriert? <a href="register.php">Werde jetzt Mitglied</a></p>
         </form>
     </div>
-
 
 <br>
 <br><br>
@@ -76,8 +72,6 @@
 			mysqli_close($tunnel);
 
 		?>
-
-		
 
 </body>
 </html>

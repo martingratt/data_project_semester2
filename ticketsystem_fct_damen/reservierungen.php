@@ -18,7 +18,7 @@ if (isset($_SESSION["name"])) {
     <div class="profil"><a href="profile.php" class="nav">Profil</a></div>
     <div class="profil"><a href="reservierungen.php" class="nav">Reservierungen</a></div>
     <div class="logout"><a href="logout.php" class="nav">Logout</a></div>
-    <div class="label"><h1>Ticketsystem</h1></div>
+    <div class="label"><h1>Ticketsystem - FC Tirol (Damen)</h1></div>
     </body>
 
     <?php
@@ -31,26 +31,26 @@ if (isset($_SESSION["name"])) {
         die('Ungültige Abfrage: ' . mysqli_error());
     }
 
-    echo '<table>';
-    echo "<tr>";
-    echo "<th>TicketID</th>";
-    echo "<th>Spieltag</th>";
-    echo "<th>Datum</th>";
-    echo "<th>Uhrzeit</th>";
-    echo "<th>Auswärtsmannschaft</th>";
-    echo "<th>Kategorie</th>";
-    echo "<th>Preis</th>";
-    echo "</tr>";
+    echo "<table>
+    <tr>
+    <th>TicketID</th>
+    <th>Spieltag</th>
+    <th>Datum</th>
+    <th>Uhrzeit</th>
+    <th>Auswärtsmannschaft</th>
+    <th>Kategorie</th>
+    <th>Preis</th>
+    </tr>";
 
     while ($zeile = mysqli_fetch_array($db_query)) {
         echo "<tr>";
-        echo "<th>" . utf8_encode($zeile['TicketID']) . "</th>";
-        echo "<td>" . utf8_encode($zeile['Spieltag']) . "</td>";
-        echo "<td>" . utf8_encode($zeile['Datum']) . "</td>";
-        echo "<td>" . utf8_encode($zeile['Uhrzeit']) . "</td>";
+        echo "<th>" . $zeile['TicketID'] . "</th>";
+        echo "<td>" . $zeile['Spieltag'] . "</td>";
+        echo "<td>" . $zeile['Datum'] . "</td>";
+        echo "<td>" . $zeile['Uhrzeit'] . "</td>";
         echo "<td>" . utf8_encode($zeile['Gegner']) . "</td>";
         echo "<td>" . utf8_encode($zeile['Kategorie']) . "</td>";
-        echo "<td>€ " . utf8_encode($zeile['Preis']) . "</td>";
+        echo "<td>€ " . $zeile['Preis'] . "</td>";
         echo "</tr>";
 
     }
@@ -61,19 +61,19 @@ if (isset($_SESSION["name"])) {
         die('Ungültige Abfrage: ' . mysqli_error());
     }
 
-    echo "<tr>";
-    echo "<td></td>";
-    echo "<td></td>";
-    echo "<td></td>";
-    echo "<td></td>";
-    echo "<td></td>";
-    echo "<th>Gesamtpreis</th>";
+    echo "<tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th>Gesamtpreis</th>";
     while ($zeile = mysqli_fetch_array($db_query)) {
         echo "<th>€ " . $zeile['Gesamtpreis'] . "</th>";
     }
-    echo "</tr>";
+    echo "</tr>
 
-    echo "</table>";
+    </table>";
 
     ?>
 <br><br>
@@ -90,30 +90,27 @@ if (isset($_SESSION["name"])) {
 
         $sql = mysqli_query($tunnel, "SELECT * FROM Tickets WHERE Username = '$nickname' ORDER BY TicketID");
 
-        echo '<table>';
-        echo "<tr>";
-        echo "<th>TicketID</th>";
-        echo "<th></th>";
-        echo "</tr>";
+        echo "<table>
+        <tr>
+        <th>TicketID</th>
+        <th></th>
+        </tr>
+        <tr>
+        <td>
 
-        echo "<tr>";
-        echo "<td>";
-
-        echo"<select name='TicketID'>";
+        <select name='TicketID'>";
         while ($row = $sql->fetch_assoc()){
 
             echo "<option value=".$row['TicketID'].">".$row['TicketID']."</option>";
 
         }
-
-        echo "</select>";
-        echo "</td>";
-        echo "<td>";
-
-        echo"<button type=\"submit\" name=\"action\">Löschen</button>";
         ?>
-    </form>
 
+        </select>
+        </td>
+        <td>
+    <button type=\"submit\" name=\"action\">Löschen</button>
+    </form>
     </html>
 
     <?php
